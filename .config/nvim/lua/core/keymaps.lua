@@ -39,6 +39,3 @@ vim.keymap.set('n', '<leader>ff', '<cmd> Telescope find_files <CR>')
 -- nvim-tree
 vim.keymap.set('n', '<leader><S-e>', '<cmd> NvimTreeToggle <CR>')
 
-
--- LSP 
-vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})

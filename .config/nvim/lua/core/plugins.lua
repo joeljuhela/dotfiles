@@ -29,8 +29,8 @@ return require('packer').startup(function(use)
     use 'nvim-lualine/lualine.nvim'                 -- Statusline
     use { 'catppuccin/nvim', as = 'catppuccin' }    -- Theme
     use {                                           -- Tabs
-        'akinsho/bufferline.nvim', 
-        requires = 'nvim-tree/nvim-web-devicons' 
+        'akinsho/bufferline.nvim',
+        requires = 'nvim-tree/nvim-web-devicons'
     }
     use {                                           -- Fuzzy finding
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
@@ -45,6 +45,9 @@ return require('packer').startup(function(use)
         'williamboman/mason-lspconfig.nvim',
         'neovim/nvim-lspconfig',
     }
+    use 'hrsh7th/nvim-cmp'                          -- Autocomplete
+    use 'hrsh7th/cmp-nvim-lsp'                      -- Autocomplete
+    use 'L3MON4D3/LuaSnip'                          -- Snippets
 
 
 
