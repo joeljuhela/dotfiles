@@ -49,8 +49,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/nvim-cmp'                          -- Autocomplete
     use 'hrsh7th/cmp-nvim-lsp'                      -- Autocomplete
     use 'L3MON4D3/LuaSnip'                          -- Snippets
-
-
+    use 'jiangmiao/auto-pairs'                      -- Autoclose brackets, quotes etc.
 
 
     if packer_bootstrap then
