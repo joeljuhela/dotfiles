@@ -37,6 +37,7 @@ return require('packer').startup(function(use)
         'akinsho/bufferline.nvim',
         requires = 'nvim-tree/nvim-web-devicons'
     }
+    use 'lukas-reineke/indent-blankline.nvim'       -- Indentation guide
     use {                                           -- Fuzzy finding
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires= { {'nvim-lua/plenary.nvim'} }
