@@ -29,8 +29,5 @@ vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 vim.keymap.set('n', '<TAB>', ':bn<CR>')
 vim.keymap.set('n', '<S-TAB>', ':bp<CR>')
 
--- telescope
-vim.keymap.set('n', '<leader>ff', '<cmd> Telescope find_files <CR>')
-
 -- other keymaps for plugins can be found in separate config files in   
 -- core/plugin_config
