@@ -28,14 +28,9 @@ vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 -- Navigating buffers
 vim.keymap.set('n', '<TAB>', ':bn<CR>')
 vim.keymap.set('n', '<S-TAB>', ':bp<CR>')
-vim.keymap.set('n', '<leader>bd', ':bd<CR>')
-
--- Plugins --
--------------
 
 -- telescope
 vim.keymap.set('n', '<leader>ff', '<cmd> Telescope find_files <CR>')
 
--- nvim-tree
-vim.keymap.set('n', '<leader><S-e>', '<cmd> NvimTreeToggle <CR>')
-
+-- other keymaps for plugins can be found in separate config files in   
+-- core/plugin_config
