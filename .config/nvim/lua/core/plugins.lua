@@ -28,6 +28,10 @@ return require('packer').startup(function(use)
     use 'nvim-tree/nvim-web-devicons'               -- Icons
     use 'nvim-lualine/lualine.nvim'                 -- Statusline
     use { 'catppuccin/nvim', as = 'catppuccin' }    -- Theme
+    use {                                           -- Floating command prompt
+        'VonHeikemen/fine-cmdline.nvim',
+        requires = { 'MunifTanjim/nui.nvim' }
+    }
     use 'echasnovski/mini.bufremove'                -- Keep layout when removing buffers
     use {                                           -- Tabs
         'akinsho/bufferline.nvim',

@@ -9,9 +9,6 @@ vim.g.mapleader = ' '
 -- Normal mode --
 -----------------
 
--- General --
--------------
-
 -- Navigating windows
 vim.keymap.set('n', '<C-h>', '<C-w>h', opts)
 vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
@@ -28,6 +25,9 @@ vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 -- Navigating buffers
 vim.keymap.set('n', '<TAB>', ':bn<CR>')
 vim.keymap.set('n', '<S-TAB>', ':bp<CR>')
+
+vim.keymap.set('n', '<leader>fd', ':execute "cd ~/.config/nvim" | e init.lua <CR>', { desc='Open Neovim config' })
+
 
 -- other keymaps for plugins can be found in separate config files in   
 -- core/plugin_config
