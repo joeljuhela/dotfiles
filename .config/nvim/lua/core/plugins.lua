@@ -50,7 +50,35 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-nvim-lsp'                      -- Autocomplete
     use 'L3MON4D3/LuaSnip'                          -- Snippets
     use 'jiangmiao/auto-pairs'                      -- Autoclose brackets, quotes etc.
-
+    use {
+        'folke/which-key.nvim',
+        config = function ()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+            require('which-key').setup()
+        end
+    }
+    use {
+        'glepnir/dashboard-nvim',                   -- Dashboard
+        event = 'VimEnter',
+        config = function() require('dashboard').setup({
+            theme = 'doom',
+            config = {                              -- I wish to move this to another file at some point
+                week_header = {
+                    enable = true
+                },
+                center = {
+                    {
+                        icon = 'D',
+                        desc = 'Find Files',
+                        key = 'SPACE f f',
+                        action = 'Telescope find_files'
+                    }
+                }
+            }
+        })
+        end
+    }
 
     if packer_bootstrap then
         require('packer').sync()
