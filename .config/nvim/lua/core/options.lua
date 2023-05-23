@@ -21,3 +21,4 @@ vim.opt.incsearch = true		-- search as characters are entered
 vim.opt.ignorecase = true		-- by default, ignore case in search
 vim.opt.smartcase = true		-- case-sensitive when uppercase is used
 
+vim.o.termguicolors = true
