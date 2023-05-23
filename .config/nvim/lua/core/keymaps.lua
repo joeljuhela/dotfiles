@@ -26,7 +26,7 @@ vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 vim.keymap.set('n', '<TAB>', ':bn<CR>')
 vim.keymap.set('n', '<S-TAB>', ':bp<CR>')
 
-vim.keymap.set('n', '<leader>fd', ':execute "cd ~/.config/nvim" | e init.lua <CR>', { desc='Open Neovim config' })
+vim.keymap.set('n', '<leader>fd', '<cmd>execute "cd ~/.config/nvim" | e init.lua <CR><cmd>NvimTreeFindFile!<CR>', { desc='Open Neovim config' })
 
 vim.keymap.set('n', ',', 'i<CR><esc>', { desc='break line while in normal mode' })
 -------------------
