@@ -45,5 +45,9 @@ vim.keymap.set("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev se
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
+-- clear hlsearch when by pressing esc
+vim.keymap.set('n', '<esc>', '<cmd>noh<CR><esc>')
+vim.keymap.set('i', '<esc>', '<cmd>noh<CR><esc>')
+
 -- other keymaps for plugins can be found in separate config files in   
 -- core/plugin_config

@@ -55,6 +55,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-nvim-lsp'                      -- Autocomplete
     use 'L3MON4D3/LuaSnip'                          -- Snippets
     use 'jiangmiao/auto-pairs'                      -- Autoclose brackets, quotes etc.
+    use 'numToStr/Comment.nvim'                     -- Commenting
     use {
         'folke/which-key.nvim',
         config = function ()
