@@ -28,6 +28,7 @@ vim.keymap.set('n', '<S-TAB>', ':bp<CR>')
 
 vim.keymap.set('n', '<leader>fd', ':execute "cd ~/.config/nvim" | e init.lua <CR>', { desc='Open Neovim config' })
 
+vim.keymap.set('n', ',', 'i<CR><esc>', { desc='break line while in normal mode' })
 -------------------
 -- Miscellanious --
 -------------------
