@@ -75,10 +75,19 @@ return require('packer').startup(function(use)
                 },
                 center = {
                     {
-                        icon = 'D',
                         desc = 'Find Files',
-                        key = 'SPACE f f',
+                        key = 'f',
+                        key_hl = 'Number',
                         action = 'Telescope find_files'
+                    },
+                    {
+                        desc = 'Open Neovim config',
+                        key = 'd',
+                        key_hl = 'Number',
+                        action = function ()
+                           vim.cmd('execute "cd ~/.config/nvim | e init.lua"')
+                           vim.cmd('NvimTreeFindFile!')
+                        end
                     }
                 }
             }
