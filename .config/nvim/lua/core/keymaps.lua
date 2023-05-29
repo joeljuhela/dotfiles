@@ -50,5 +50,7 @@ vim.keymap.set("v", ">", ">gv")
 vim.keymap.set('n', '<esc>', '<cmd>noh<CR><esc>')
 vim.keymap.set('i', '<esc>', '<cmd>noh<CR><esc>')
 
+-- select all lines in a file
+vim.keymap.set("n", '<leader>A', 'ggVG', { desc = "Select all" })
 -- other keymaps for plugins can be found in separate config files in   
 -- core/plugin_config
