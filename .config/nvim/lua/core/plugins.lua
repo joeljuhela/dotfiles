@@ -87,6 +87,12 @@ return require('packer').startup(function(use)
                         action = 'Telescope find_files'
                     },
                     {
+                        desc = 'Recent Files',
+                        key = 'r',
+                        key_hl = 'Number',
+                        action = 'Telescope oldfiles'
+                    },
+                    {
                         desc = 'Open Neovim config',
                         key = 'd',
                         key_hl = 'Number',
