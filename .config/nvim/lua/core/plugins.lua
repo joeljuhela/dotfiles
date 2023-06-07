@@ -28,16 +28,12 @@ return require('packer').startup(function(use)
     use 'nvim-tree/nvim-web-devicons'               -- Icons
     use 'nvim-lualine/lualine.nvim'                 -- Statusline
     use { 'catppuccin/nvim', as = 'catppuccin' }    -- Theme
-    use {                                           -- Floating command prompt
-        'VonHeikemen/fine-cmdline.nvim',
-        requires = { 'MunifTanjim/nui.nvim' }
-    }
+    use 'ThePrimeagen/harpoon'
     use 'echasnovski/mini.bufremove'                -- Keep layout when removing buffers
     use {                                           -- Tabs
         'akinsho/bufferline.nvim',
         requires = 'nvim-tree/nvim-web-devicons'
     }
-    use 'lukas-reineke/indent-blankline.nvim'       -- Indentation guide
     use {                                           -- Fuzzy finding
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires= { {'nvim-lua/plenary.nvim'} }
