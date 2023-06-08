@@ -27,7 +27,8 @@ return require('packer').startup(function(use)
     use 'nvim-tree/nvim-tree.lua'                   -- File browser
     use 'nvim-tree/nvim-web-devicons'               -- Icons
     use 'nvim-lualine/lualine.nvim'                 -- Statusline
-    use { 'catppuccin/nvim', as = 'catppuccin' }    -- Theme
+    -- use { 'catppuccin/nvim', as = 'catppuccin' }    -- Theme
+    use { 'rose-pine/neovim', as = 'rose-pine' }    -- Theme
     use 'ThePrimeagen/harpoon'
     use 'echasnovski/mini.bufremove'                -- Keep layout when removing buffers
     use {                                           -- Fuzzy finding
@@ -39,6 +40,7 @@ return require('packer').startup(function(use)
         run = ':TSUpdate'
     }
     use { 'folke/trouble.nvim', requires={ {'nvim-tree/nvim-web-devicons'} } }
+    use { 'folke/zen-mode.nvim' }
     use {                                           -- LSP
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
@@ -77,7 +79,6 @@ return require('packer').startup(function(use)
                         key_hl = 'Number',
                         action = function ()
                            vim.cmd('execute "cd ~/.config/nvim | e init.lua"')
-                           vim.cmd('NvimTreeFindFile!')
                         end
                     }
                 }
