@@ -30,10 +30,6 @@ return require('packer').startup(function(use)
     use { 'catppuccin/nvim', as = 'catppuccin' }    -- Theme
     use 'ThePrimeagen/harpoon'
     use 'echasnovski/mini.bufremove'                -- Keep layout when removing buffers
-    use {                                           -- Tabs
-        'akinsho/bufferline.nvim',
-        requires = 'nvim-tree/nvim-web-devicons'
-    }
     use {                                           -- Fuzzy finding
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires= { {'nvim-lua/plenary.nvim'} }
@@ -52,14 +48,6 @@ return require('packer').startup(function(use)
     use 'L3MON4D3/LuaSnip'                          -- Snippets
     use 'jiangmiao/auto-pairs'                      -- Autoclose brackets, quotes etc.
     use 'numToStr/Comment.nvim'                     -- Commenting
-    use {
-        'folke/which-key.nvim',
-        config = function ()
-            vim.o.timeout = true
-            vim.o.timeoutlen = 300
-            require('which-key').setup()
-        end
-    }
     use {
         'glepnir/dashboard-nvim',                   -- Dashboard
         event = 'VimEnter',
