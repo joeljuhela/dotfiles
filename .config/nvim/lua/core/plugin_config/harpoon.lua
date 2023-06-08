@@ -1,4 +1,10 @@
-vim.keymap.set('n', '<leader>fp', require('harpoon.ui').toggle_quick_menu)
-vim.keymap.set('n', 'z', require('harpoon.mark').add_file)
-vim.keymap.set('n', '<TAB>', require('harpoon.ui').nav_next)
-vim.keymap.set('n', '<S-TAB>', require('harpoon.ui').nav_prev)
+local mark = require('harpoon.mark')
+local ui = require('harpoon.ui')
+
+vim.keymap.set('n', '<C-<>', ui.toggle_quick_menu)
+vim.keymap.set('n', 'z', mark.add_file)
+
+vim.keymap.set('n', '<C-1>', function() ui.nav_file(1) end)
+vim.keymap.set('n', '<C-2>', function() ui.nav_file(2) end)
+vim.keymap.set('n', '<C-3>', function() ui.nav_file(3) end)
+vim.keymap.set('n', '<C-4>', function() ui.nav_file(4) end)
