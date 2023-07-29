@@ -21,26 +21,16 @@ vim.keymap.set('n', '<C-Down>', ':resize +2<CR>', opts)
 vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>', opts)
 vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 
+vim.keymap.set('n', '<leader>fd', '<cmd>execute "cd ~/.config/nvim" | e init.lua <CR>', { desc='Open Neovim config' })
 
--- Navigating buffers
-vim.keymap.set('n', '<TAB>', ':bn<CR>')
-vim.keymap.set('n', '<S-TAB>', ':bp<CR>')
-
-vim.keymap.set('n', '<leader>fd', '<cmd>execute "cd ~/.config/nvim" | e init.lua <CR><cmd>NvimTreeFindFile!<CR>', { desc='Open Neovim config' })
-
-vim.keymap.set('n', ',', 'i<CR><esc>', { desc='break line while in normal mode' })
 -------------------
 -- Miscellanious --
 -------------------
 
--- This as many other things in this conf is straight from lazyvim
--- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
-vim.keymap.set("n", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next search result" })
-vim.keymap.set("x", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next search result" })
-vim.keymap.set("o", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next search result" })
-vim.keymap.set("n", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev search result" })
-vim.keymap.set("x", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev search result" })
-vim.keymap.set("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev search result" })
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set("n", "n", "nzz")
+vim.keymap.set("n", "N", "Nzz")
 
 -- better indenting
 vim.keymap.set("v", "<", "<gv")

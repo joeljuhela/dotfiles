@@ -27,23 +27,10 @@ return require('packer').startup(function(use)
     use 'nvim-tree/nvim-tree.lua'                   -- File browser
     use 'nvim-tree/nvim-web-devicons'               -- Icons
     use 'nvim-lualine/lualine.nvim'                 -- Statusline
-    use { 'catppuccin/nvim', as = 'catppuccin' }    -- Theme
-    use {                                           -- Floating command prompt
-        'VonHeikemen/fine-cmdline.nvim',
-        requires = { 'MunifTanjim/nui.nvim' }
-    }
+    -- use { 'catppuccin/nvim', as = 'catppuccin' }    -- Theme
+    use { 'rose-pine/neovim', as = 'rose-pine' }    -- Theme
+    use 'ThePrimeagen/harpoon'
     use 'echasnovski/mini.bufremove'                -- Keep layout when removing buffers
-    use {                                           -- Tabs
-        'akinsho/bufferline.nvim',
-        requires = 'nvim-tree/nvim-web-devicons'
-    }
-    use 'lukas-reineke/indent-blankline.nvim'       -- Indentation guide
-    use {                                           -- Gitsigns
-        'lewis6991/gitsigns.nvim',
-        config = function()
-            require('gitsigns').setup()
-        end
-    }
     use {                                           -- Fuzzy finding
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires= { {'nvim-lua/plenary.nvim'} }
@@ -52,6 +39,8 @@ return require('packer').startup(function(use)
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }
+    use { 'folke/trouble.nvim', requires={ {'nvim-tree/nvim-web-devicons'} } }
+    use { 'folke/zen-mode.nvim' }
     use {                                           -- LSP
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
@@ -62,14 +51,6 @@ return require('packer').startup(function(use)
     use 'L3MON4D3/LuaSnip'                          -- Snippets
     use 'jiangmiao/auto-pairs'                      -- Autoclose brackets, quotes etc.
     use 'numToStr/Comment.nvim'                     -- Commenting
-    use {
-        'folke/which-key.nvim',
-        config = function ()
-            vim.o.timeout = true
-            vim.o.timeoutlen = 300
-            require('which-key').setup()
-        end
-    }
     use {
         'glepnir/dashboard-nvim',                   -- Dashboard
         event = 'VimEnter',
@@ -98,7 +79,6 @@ return require('packer').startup(function(use)
                         key_hl = 'Number',
                         action = function ()
                            vim.cmd('execute "cd ~/.config/nvim | e init.lua"')
-                           vim.cmd('NvimTreeFindFile!')
                         end
                     }
                 }
