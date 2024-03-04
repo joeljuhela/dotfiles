@@ -1,9 +1,9 @@
 local opts = {
-    noremap = true,
-    silent = true
+	noremap = true,
+	silent = true
 }
 
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 
 -----------------
 -- Normal mode --
@@ -21,11 +21,11 @@ vim.keymap.set('n', '<C-Down>', ':resize +2<CR>', opts)
 vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>', opts)
 vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 
-vim.keymap.set('n', '<leader>fd', '<cmd>execute "cd ~/.config/nvim" | e init.lua <CR>', { desc='Open Neovim config' })
-
 -------------------
 -- Miscellanious --
 -------------------
+
+vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
@@ -42,5 +42,3 @@ vim.keymap.set('i', '<esc>', '<cmd>noh<CR><esc>')
 
 -- select all lines in a file
 vim.keymap.set("n", '<leader>A', 'ggVG', { desc = "Select all" })
--- other keymaps for plugins can be found in separate config files in   
--- core/plugin_config
