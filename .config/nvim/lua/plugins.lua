@@ -2,7 +2,7 @@ return {
   "nvim-lua/plenary.nvim",
   "thePrimeagen/harpoon",
 	{"nvim-telescope/telescope.nvim", tag = "0.1.5"},
-	{"Everblush/nvim", name = "everblush", lazy = false},
+  {"catppuccin/nvim", name = "catppuccin", priority = 1000},
 	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
 
 	{'williamboman/mason.nvim'},
