@@ -1,2 +1,2 @@
-vim.cmd.colorscheme("everblush")
+vim.cmd.colorscheme("catppuccin-mocha")
 
